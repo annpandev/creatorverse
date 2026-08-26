@@ -10,7 +10,7 @@ function AddCreator() {
   const [imageURL, setImageURL] = useState('');
 
   return (
-    <div>
+    <main className="container">
       <h1>Add Creator</h1>
 
       <input
@@ -49,7 +49,7 @@ function AddCreator() {
         <button onClick={handleSubmit}>
     Submit
   </button>
-    </div>
+    </main>
   )
 
   async function handleSubmit(){

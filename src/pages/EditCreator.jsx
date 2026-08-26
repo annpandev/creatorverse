@@ -65,8 +65,13 @@ function EditCreator({onDelete}){
   }
 
   return(
-    <div>
+    <main className="container">
       <h1>Edit Creator</h1>
+      
+      <form onSubmit={(e)=>{
+        e.preventDefault();
+        handleSubmit();
+      }}>
 
       <input 
       type="text"
@@ -91,14 +96,17 @@ function EditCreator({onDelete}){
       value={creatorImageURL}
       onChange={(e)=>setCreatorImageURL(e.target.value)}/>
 
-      <button onClick={handleSubmit}>
+      <button type="submit">
         Submit
       </button>
 
-      <button onClick={handleDelete}>
+      <button type="button"
+      onClick={handleDelete}>
         Delete
       </button>
-    </div>
+
+      </form>
+    </main>
   )
 }
 

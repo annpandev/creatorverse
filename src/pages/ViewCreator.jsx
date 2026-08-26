@@ -30,9 +30,18 @@ function ViewCreator(){
   }
 return(
 <div>
-  <h1>View Creator</h1>
-  <p>Creator name: {name}</p>
-  <button onclick={()=>navigate('/edit/${name}')}>
+  <h1>{creator.name}</h1>
+  {creator.imageURL && <img src={creator.imageURL} alt={creator.name} />}
+
+  <p>{creator.description}</p>
+
+  <a href={creator.url} 
+     target="_blank" 
+     rel="noreferrer"
+     style={{marginRight:'12px'}}>
+    Visit Creator
+  </a>
+  <button onClick={()=>navigate(`/edit/${name}`)}>
     Edit
   </button>
 
