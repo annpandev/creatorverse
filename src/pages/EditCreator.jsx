@@ -36,10 +36,10 @@ function EditCreator({onDelete}){
     const {data, error} = await supabase
     .from('creators')
     .update({
-      name: creatorName,
-      url: creatorURL,
-      description: creatorDescription,
-      imageURL: creatorImageURL
+      name: creatorName.trim(),
+      url: creatorURL.trim(),
+      description: creatorDescription.trim(),
+      imageURL: creatorImageURL.trim()
     })
     .eq('name',name)
 

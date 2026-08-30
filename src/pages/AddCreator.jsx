@@ -54,10 +54,10 @@ function AddCreator() {
 
   async function handleSubmit(){
     const creator = {
-      name: name,
-      url: url,
-      description: description,
-      imageURL: imageURL
+      name: name.trim(),
+      url: url.trim(),
+      description: description.trim(),
+      imageURL: imageURL.trim()
     };
 
     const {data, error} = await supabase

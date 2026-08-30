@@ -34,6 +34,7 @@ return(
   {creator.imageURL && <img src={creator.imageURL} alt={creator.name} />}
 
   <p>{creator.description}</p>
+  <p>URL: {creator.url}</p>
 
   <a href={creator.url} 
      target="_blank" 
